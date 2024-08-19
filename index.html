@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciador de Contatos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Gerenciador de Contatos</h1>
+    </header>
+    <main>
+        <section id="contact-form">
+            <h2>Adicionar Novo Contato</h2>
+            <form id="form">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" required>
+                
+                <label for="phone">Telefone:</label>
+                <input type="text" id="phone" required>
+                
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" required>
+                
+                <button type="submit">Adicionar Contato</button>
+            </form>
+        </section>
+        
+        <section id="contact-list">
+            <h2>Lista de Contatos</h2>
+            <ul id="contacts"></ul>
+        </section>
+        
+        <section id="edit-form" style="display: none;">
+            <h2>Editar Contato</h2>
+            <form id="editForm">
+                <input type="hidden" id="editIndex">
+                
+                <label for="editName">Nome:</label>
+                <input type="text" id="editName" required>
+                
+                <label for="editPhone">Telefone:</label>
+                <input type="text" id="editPhone" required>
+                
+                <label for="editEmail">E-mail:</label>
+                <input type="email" id="editEmail" required>
+                
+                <button type="submit">Salvar Alterações</button>
+                <button type="button" id="cancelEdit">Cancelar</button>
+            </form>
+        </section>
+    </main>
+    <button id="theme-toggle" aria-label="Alternar Tema">Alternar Tema</button>
+    <script src="app.js"></script>
+</body>
+</html>
